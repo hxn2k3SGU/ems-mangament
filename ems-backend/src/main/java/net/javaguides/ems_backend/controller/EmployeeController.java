@@ -63,4 +63,16 @@ public class EmployeeController {
         EmployeeDTO employeeDTO = employeeService.updateEmployee(employeeID, updatedEmployeeDTO);
         return ResponseEntity.ok(employeeDTO);
     }
+
+    // API XÓA
+//    @DeleteMapping
+//    public void deleteEmployee(@PathVariable("id") Long EmployeeId) {
+//        employeeService.deleteEmployee(EmployeeId);
+//        return ResponseEntity.ok("Employee deleted succesfully! ");
+//    }
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deleteEmployee(@PathVariable("id") Long EmployeeId){
+        employeeService.deleteEmployee(EmployeeId);
+        return ResponseEntity.ok("Employee deleted successfully!");
+    }
 }
