@@ -16,11 +16,11 @@ public class EmployeeDTO {
         this.email = email;
     }
 
-    public EmployeeDTO(Long id, String firstName, String lastName, String lastName1) {
+    public EmployeeDTO(Long id, String firstName, String lastName, String email) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
-        this.email = lastName1;
+        this.email = email;
     }
 
     public String getLastName() {

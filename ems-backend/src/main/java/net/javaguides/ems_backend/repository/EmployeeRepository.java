@@ -8,4 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 // Việc làm interface như thế này làm cho dễ quản lý code hơn và tách biệt được phần xử lý logic vơi khai báo method
 // Khi mà định nghĩa như này thì nó sẽ tạo ra code CRUD cho luộn
 public interface EmployeeRepository extends JpaRepository<Employee, Long> {
+
 }

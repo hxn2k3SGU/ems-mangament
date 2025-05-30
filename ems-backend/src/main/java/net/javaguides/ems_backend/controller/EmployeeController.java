@@ -8,7 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+// FIX lỗi CROS do dùng khác PORT
+// Cho phép gọi lại tất cả API của Backend này
+@CrossOrigin("*")
 // Để đánh dấu là Class này trả về JSON chứ không phải HTML
 @RestController
 // gán cho class này với đường dẫn dưới
@@ -65,11 +67,6 @@ public class EmployeeController {
     }
 
     // API XÓA
-//    @DeleteMapping
-//    public void deleteEmployee(@PathVariable("id") Long EmployeeId) {
-//        employeeService.deleteEmployee(EmployeeId);
-//        return ResponseEntity.ok("Employee deleted succesfully! ");
-//    }
     @DeleteMapping("{id}")
     public ResponseEntity<String> deleteEmployee(@PathVariable("id") Long EmployeeId){
         employeeService.deleteEmployee(EmployeeId);
